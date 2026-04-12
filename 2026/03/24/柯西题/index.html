@@ -22,13 +22,13 @@
 
     <meta name="description" content="不要把答案的一步出结果当成做题的正确姿态。短短一行字的背后可能会浪费掉你两张草稿纸   Prob 1.  a, b, c ≥ 0，证明 $$\frac{a^2-bc}{2a^2+b^2+c^2}+\frac{b^2-ac}{a^2+2b^2+c^2}+\frac{c^2-ba}{a^2+b^2+2c^2}\geq 0$$ proof. 猜测在 a &#x3D; b &#x3D; c 时取等，验证一下，如果 a &#x3D;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="柯西题">
+<meta property="og:title" content="柯西 &amp; 卡尔松 &amp; 赫尔德">
 <meta property="og:url" content="https://lhc0707.github.io/2026/03/24/%E6%9F%AF%E8%A5%BF%E9%A2%98/index.html">
 <meta property="og:site_name" content="lhc0707">
 <meta property="og:description" content="不要把答案的一步出结果当成做题的正确姿态。短短一行字的背后可能会浪费掉你两张草稿纸   Prob 1.  a, b, c ≥ 0，证明 $$\frac{a^2-bc}{2a^2+b^2+c^2}+\frac{b^2-ac}{a^2+2b^2+c^2}+\frac{c^2-ba}{a^2+b^2+2c^2}\geq 0$$ proof. 猜测在 a &#x3D; b &#x3D; c 时取等，验证一下，如果 a &#x3D;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-03-24T14:07:36.000Z">
-<meta property="article:modified_time" content="2026-03-25T14:32:55.106Z">
+<meta property="article:modified_time" content="2026-04-12T09:03:02.408Z">
 <meta property="article:author" content="lhc0707">
 <meta property="article:tag" content="做题">
 <meta name="twitter:card" content="summary">
@@ -37,10 +37,10 @@
 <link rel="canonical" href="https://lhc0707.github.io/2026/03/24/%E6%9F%AF%E8%A5%BF%E9%A2%98/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lhc0707.github.io/2026/03/24/%E6%9F%AF%E8%A5%BF%E9%A2%98/","path":"2026/03/24/柯西题/","title":"柯西题"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lhc0707.github.io/2026/03/24/%E6%9F%AF%E8%A5%BF%E9%A2%98/","path":"2026/03/24/柯西题/","title":"柯西 & 卡尔松 & 赫尔德"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>柯西题 | lhc0707</title>
+<title>柯西 & 卡尔松 & 赫尔德 | lhc0707</title>
   
 
 
@@ -80,8 +80,6 @@
   </noscript>
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
 <!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -189,12 +187,12 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -246,12 +244,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="柯西题 | lhc0707">
+      <meta itemprop="name" content="柯西 &amp; 卡尔松 &amp; 赫尔德 | lhc0707">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          柯西题
+          柯西 & 卡尔松 & 赫尔德
         </h1>
 
         <div class="post-meta-container">
@@ -269,7 +267,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-03-25 22:32:55" itemprop="dateModified" datetime="2026-03-25T22:32:55+08:00">2026-03-25</time>
+      <time title="修改时间：2026-04-12 17:03:02" itemprop="dateModified" datetime="2026-04-12T17:03:02+08:00">2026-04-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -471,6 +469,185 @@ class="math display"><em>a</em><sup>2</sup> + <em>b</em><sup>2</sup> + <
 <p><span
 class="math display"><em>a</em><sup>2</sup><em>b</em> + <em>b</em><sup>2</sup><em>c</em> + <em>c</em><sup>2</sup><em>a</em> ≥ 3<em>a</em><em>b</em><em>c</em></span></p>
 <p>证毕。</p>
+<hr />
+<p><span class="math inline">Prob. 7. </span> <span
+class="math inline"><em>a</em>, <em>b</em>, <em>c</em>, <em>d</em> &gt; 0</span>，求证</p>
+<p><span
+class="math display">$$\sum_{\text{cyc}}\frac{a}{3a^2+2b^2+c^2}\leq
+\frac{1}{6}(\sum_{\text{cyc}}\frac{1}{a})$$</span></p>
+<p><span class="math inline">proof.</span></p>
+<p><span
+class="math display">3<em>a</em><sup>2</sup> + 2<em>b</em><sup>2</sup> + <em>c</em><sup>2</sup> = 2(<em>a</em><sup>2</sup> + <em>b</em><sup>2</sup>) + (<em>a</em><sup>2</sup> + <em>c</em><sup>2</sup>) ≥ 4<em>a</em><em>b</em> + 2<em>a</em><em>c</em></span></p>
+<p>故 <span class="math display">$$\text{LHS}\leq
+\sum_{cyc}\frac{1}{4b+2c}\leq
+\sum_{cyc}(\frac{m^2}{4b}+\frac{(1-m)^2}{2c})=\sum_{cyc}(\frac{m^2}{4}+\frac{(1-m)^2}{2})\frac{1}{a}$$</span></p>
+<p>要使 <span
+class="math inline">$\frac{m^2}{4}+\frac{(1-m)^2}{2}=\frac{1}{6}$</span>，有
+<span class="math inline">$m=\frac{2}{3}$</span>。</p>
+<hr />
+<p><span class="math inline">Prob. 8.</span> 设 <span
+class="math inline"><em>a</em>, <em>b</em>, <em>c</em> &gt; 0</span>，<span
+class="math inline"><em>a</em> + <em>b</em> + <em>c</em> = <em>a</em><em>b</em> + <em>b</em><em>c</em> + <em>c</em><em>a</em></span>，求证</p>
+<p><span
+class="math display">$$\frac{1}{a^2+b+1}+\frac{1}{b^2+c+1}+\frac{1}{c^2+a+1}\leq
+1$$</span></p>
+<p><span class="math inline">proof.</span></p>
+<p><span
+class="math display">(<em>a</em><sup>2</sup> + <em>b</em> + 1)(1 + <em>b</em> + <em>c</em><sup>2</sup>) ≥ (<em>a</em> + <em>b</em> + <em>c</em>)<sup>2</sup></span></p>
+<p>故只要证</p>
+<p><span
+class="math display">3 + (<em>a</em> + <em>b</em> + <em>c</em>) + (<em>a</em><sup>2</sup> + <em>b</em><sup>2</sup> + <em>c</em><sup>2</sup>) ≤ (<em>a</em> + <em>b</em> + <em>c</em>)<sup>2</sup></span></p>
+<p><span
+class="math display">3 + <em>a</em> + <em>b</em> + <em>c</em> ≤ 2(<em>a</em><em>b</em> + <em>b</em><em>c</em> + <em>c</em><em>a</em>)</span></p>
+<p><span
+class="math display"><em>a</em> + <em>b</em> + <em>c</em> ≥ 3</span></p>
+<p>这是因为</p>
+<p><span
+class="math display">(<em>a</em> + <em>b</em> + <em>c</em>)<sup>2</sup> ≥ (<em>a</em><em>b</em> + <em>b</em><em>c</em> + <em>c</em><em>a</em>)</span></p>
+<hr />
+<p><span class="math inline">Prob. 9. </span> <span
+class="math inline"><em>a</em>, <em>b</em>, <em>c</em> &gt; 0</span>，<span
+class="math inline"><em>a</em><sup>2</sup> + <em>b</em><sup>2</sup> + <em>c</em><sup>2</sup> = 3</span>，求证</p>
+<p><span class="math display">$$\sum\frac{a}{a^2+2a+3}\leq
+\frac{1}{2}$$</span></p>
+<p>切线放缩易证。</p>
+<p><span class="math display">$$\sum_{cyc}\frac{a}{(a^2+1+2(a+1))}\leq
+\sum_{cyc}\frac{a}{4a+2}$$</span></p>
+<p>只要证</p>
+<p><span class="math display">$$\sum_{cyc}\frac{a}{2a+1}\leq
+1$$</span></p>
+<p>切线放缩易证</p>
+<hr />
+<p><span class="math inline">Prob. 10. </span> <span
+class="math inline"><em>a</em>, <em>b</em>, <em>c</em> &gt; 0</span>，<span
+class="math inline"><em>a</em><sup>2</sup> + <em>b</em><sup>2</sup> + <em>c</em><sup>2</sup> = 3</span>，求证</p>
+<p><span class="math display">$$\sum\frac{a}{a^2+2b+3}\leq
+\frac{1}{2}$$</span></p>
+<p><span class="math inline">proof.</span></p>
+<p><span
+class="math display">$$LHS=\sum_{cyc}\frac{a}{(a^2+1)+2(b+1)}\leq
+\sum_{cyc}\frac{a}{2(a+b+1)}$$</span></p>
+<p>只要证</p>
+<p><span class="math display">$$\sum\frac{b+1}{a+b+1}\geq 2$$</span></p>
+<p><span class="math display">$$\sum\frac{(b+1)^2}{(a+b+1)(b+1)}\geq
+2$$</span></p>
+<p><span class="math display">$$LHS\geq
+\frac{(a+b+c+3)^2}{a^2+b^2+c^2+ab+bc+ca+3(a+b+c)+3}=2$$</span></p>
+<hr />
+<p><span class="math inline">Prob. 11.</span> <span
+class="math inline"><em>a</em><sub><em>i</em></sub> ≥ 0</span>，求证</p>
+<p><span class="math display">$$\prod_{i=1}^n(1+a_i)\geq
+(1+(\prod_{i=1}^na_i)^{\frac{1}{n}})^n$$</span></p>
+<p><span class="math inline">proof.</span></p>
+<p>发现 <span class="math inline"><em>n</em> = 2</span> 时即 Cauchy
+不等式。</p>
+<p>回忆 AM-GM 不等式证明 Cauchy 不等式：</p>
+<p><span class="math display">$$\frac{a_i^2}{\sum a^2}+\frac{b_i^2}{\sum
+b^2}\geq \frac{2|a_ib_i|}{\sqrt{\sum a^2}\sqrt{\sum b^2}}$$</span></p>
+<p>对 <span class="math inline"><em>n</em></span> 个式子求和即得。</p>
+<p>考虑推广到</p>
+<p><span class="math display">$$\frac{a_i^3}{\sum a^3}+\frac{b_i^3}{\sum
+b^3}+\frac{c_i^3}{\sum c^3}\geq \frac{3a_ib_ic_i}{\sqrt[3]{(\sum
+a^3)(\sum b^3)(\sum c^3)}}$$</span></p>
+<p>对 <span class="math inline"><em>i</em> = 1, 2</span> 求和，有</p>
+<p><span
+class="math display">(∑<em>a</em><sub><em>i</em></sub><sup>3</sup>)(∑<em>b</em><sub><em>i</em></sub><sup>3</sup>)(∑<em>c</em><sub><em>i</em></sub><sup>3</sup>) ≥ (<em>a</em><sub>1</sub><em>b</em><sub>1</sub><em>c</em><sub>1</sub> + <em>a</em><sub>2</sub><em>b</em><sub>2</sub><em>c</em><sub>2</sub>)<sup>3</sup></span></p>
+<p>更一般的，</p>
+<p><span
+class="math display">(<em>a</em><sub>11</sub><sup><em>n</em></sup> + <em>a</em><sub>12</sub><sup><em>n</em></sup>)(<em>a</em><sub>21</sub><sup><em>n</em></sup> + <em>a</em><sub>22</sub><sup><em>n</em></sup>)…(<em>a</em><sub><em>n</em>1</sub><sup><em>n</em></sup> + <em>a</em><sub><em>n</em>2</sub><sup><em>n</em></sup>) ≥ (<em>a</em><sub>11</sub>…<em>a</em><sub><em>n</em>1</sub> + <em>a</em><sub>11</sub>…<em>a</em><sub><em>n</em>1</sub>)</span></p>
+<p>再推广，有</p>
+<p><span
+class="math display">$$\prod_{i=1}^n(a_{i1}^n+\dots+a_{im}^n)\geq
+(\sum_{j=1}^ma_{1j}a_{2j}\dots a_{nj})^n$$</span></p>
+<p>此即 Calson 不等式。</p>
+<hr />
+<p><span class="math inline">Prob. 12</span> 即为证明 Calson
+不等式。</p>
+<p>一种运用均值不等式的做法：</p>
+<p>由均值不等式，有</p>
+<p><span
+class="math display">$$(\prod\limits_{j=1}^m\dfrac{x_{j1}}{\sum\limits_{i=1}^nx_{ji}})^{\frac{1}{m}}\leq
+\frac{1}{m}\sum\limits_{j=1}^m\dfrac{x_{j1}}{\sum\limits_{i=1}^nx_{ji}}$$</span></p>
+<p>同理有</p>
+<p><span
+class="math display">$$(\prod\limits_{j=1}^m\dfrac{x_{j2}}{\sum\limits_{i=1}^nx_{ji}})^{\frac{1}{m}}\leq
+\frac{1}{m}\sum\limits_{j=1}^m\dfrac{x_{j2}}{\sum\limits_{i=1}^nx_{ji}}$$</span></p>
+<p><span class="math display">…</span></p>
+<p><span
+class="math display">$$(\prod\limits_{j=1}^m\dfrac{x_{jn}}{\sum\limits_{i=1}^nx_{ji}})^{\frac{1}{m}}\leq
+\frac{1}{m}\sum\limits_{j=1}^m\dfrac{x_{jn}}{\sum\limits_{i=1}^nx_{ji}}$$</span></p>
+<p>相加，得</p>
+<p><span
+class="math display">$$\sum\limits_{k=1}^n(\prod\limits_{j=1}^m\dfrac{x_{jk}}{\sum_{i=1}^nx_{ji}})^{\frac{1}{m}}\leq
+1$$</span></p>
+<p>整理即得 Calson 不等式。</p>
+<hr />
+<p><span class="math inline">Prob. 13. </span></p>
+<p>求 <span
+class="math display">$$\frac{xyz}{(1+4x)(9x+y)(4y+z)(9z+1)}$$</span>
+的最大值。</p>
+<p><span class="math inline">sol.</span></p>
+<p><span class="math display">$$(1+4x)(9x+y)(4y+z)(9z+1)\geq
+(\sqrt[4]{3^4\times 2^2xyz}+\sqrt[4]{2^2xyz})^4=1024xyz$$</span></p>
+<p>故 <span
+class="math display">$$\frac{xyz}{(1+4x)(9x+y)(4y+z)(9z+1)}\leq
+\frac{1}{1024}$$</span></p>
+<p>等号条件存在。</p>
+<hr />
+<p><span class="math inline">Prob. 14.</span> <span
+class="math inline"><em>a</em>, <em>b</em>, <em>c</em> &gt; 0</span>，求证</p>
+<p><span
+class="math display">$$\frac{a}{\sqrt{a^2+8bc}}+\frac{b}{\sqrt{b^2+8ca}}+\frac{c}{\sqrt{c^2+8ab}}\geq
+1$$</span></p>
+<p><span class="math inline">proof.</span></p>
+<p><span
+class="math display"><em>L</em><em>H</em><em>S</em><sup>2</sup>(∑<sub><em>c</em><em>y</em><em>c</em></sub><em>a</em>(<em>a</em><sup>2</sup> + 8<em>b</em><em>c</em>)) ≥ (<em>a</em> + <em>b</em> + <em>c</em>)<sup>3</sup></span></p>
+<p>故只要证 <span
+class="math display">$$\frac{(a+b+c)^3}{\sum_{cyc}a(a^2+8bc)}\geq
+1$$</span></p>
+<p>即 <span
+class="math display">(<em>a</em> + <em>b</em> + <em>c</em>)<sup>3</sup> ≥ <em>a</em><sup>3</sup> + <em>b</em><sup>3</sup> + <em>c</em><sup>3</sup> + 24<em>a</em><em>b</em><em>c</em></span></p>
+<p>易证。</p>
+<hr />
+<p><span class="math inline">Prob. 15. </span> 证明权方和不等式</p>
+<p><span class="math display">$$\sum\frac{a_i^{m+1}}{b_i^m}\geq
+\frac{(\sum a_i)^{m+1}}{(\sum b_i)^m}$$</span></p>
+<p><span class="math inline">proof. </span></p>
+<p><span class="math display">$$LHS\cdot (\sum b_i)^m\geq (\sum
+\sqrt[m+1]{\frac{a_i^{m+1}}{b_i^m}b_i^m})^{m+1}=(\sum
+a_i)^m+1$$</span></p>
+<hr />
+<p><span class="math inline">Prob. 16</span> 废物题。</p>
+<hr />
+<p><span class="math inline">Prob. 17</span> 证明幂平均不等式。</p>
+<p>定义</p>
+<p><span
+class="math display">$$M_p=(\frac{1}{n}\sum_{i=1}^na_i^p)^{\frac{1}{p}}$$</span></p>
+<p>要证对 <span
+class="math inline"><em>p</em> &gt; <em>q</em></span>，有 <span
+class="math inline"><em>M</em><sub><em>p</em></sub> ≥ <em>M</em><sub><em>q</em></sub></span>。</p>
+<p><span class="math inline">proof.</span></p>
+<p>对于 <span
+class="math inline"><em>p</em> &gt; <em>q</em> &gt; 0</span>，两边同时做
+<span class="math inline"><em>p</em></span> 次方，有</p>
+<p><span class="math display">$$\frac{1}{n}\sum_{i=1}^na_i^p\geq
+(\frac{1}{n}\sum_{i=1}^na_i^q)^{p/q}$$</span></p>
+<p><span class="math display">$$\frac{1}{n}\sum_{i=1}^n(a_i^q)^{p/q}\geq
+(\frac{1}{n}\sum_{i=1}^na_i^q)^{p/q}$$</span></p>
+<p>记 <span
+class="math inline"><em>x</em><sub><em>i</em></sub> = <em>a</em><sub><em>i</em></sub><sup><em>q</em></sup>, <em>t</em> = <em>p</em>/<em>q</em> &gt; 1</span>，只要证</p>
+<p><span class="math display">$$\frac{1}{n}\sum_{i=1}^nx_i^t\geq
+(\frac{1}{n}\sum_{i=1}^nx_i)^t$$</span></p>
+<p>对 <span
+class="math inline"><em>f</em>(<em>x</em>) = <em>x</em><sup><em>t</em></sup></span>
+求二阶导，</p>
+<p><span
+class="math display"><em>f</em>″(<em>x</em>) = <em>t</em>(<em>t</em> − 1)<em>x</em><sup><em>t</em> − 2</sup> &gt; 0</span></p>
+<p>琴声不等式易证。对 <span
+class="math inline">0 &gt; <em>p</em> &gt; <em>q</em></span>
+的情况同理。对 <span
+class="math inline"><em>p</em> &gt; 0 &gt; <em>q</em></span>
+的情况易证。</p>
 
     </div>
 
@@ -492,8 +669,8 @@ class="math display"><em>a</em><sup>2</sup><em>b</em> + <em>b</em><sup>2</su
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2026/03/24/Calson/" rel="next" title="Calson 不等式">
-                  Calson 不等式 <i class="fa fa-angle-right"></i>
+                <a href="/2026/04/12/OH-problem/" rel="next" title="厉害的羟基数学题">
+                  厉害的羟基数学题 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
