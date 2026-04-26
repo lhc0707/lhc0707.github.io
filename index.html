@@ -179,7 +179,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -190,7 +190,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -228,7 +228,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lhc0707.github.io/2026/03/22/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://lhc0707.github.io/2026/04/26/abel/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/lhc.png">
@@ -249,7 +249,7 @@
           
               <span class="post-sticky-flag" title="置顶">
                 <i class="fa fa-thumbtack"></i>
-              </span><a href="/2026/03/22/hello-world/" class="post-title-link" itemprop="url">Hello, World!</a>
+              </span><a href="/2026/04/26/abel/" class="post-title-link" itemprop="url">分布求和 & 排序不等式</a>
         </h2>
 
         <div class="post-meta-container">
@@ -259,24 +259,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2026-03-22 17:35:08" itemprop="dateCreated datePublished" datetime="2026-03-22T17:35:08+08:00">2026-03-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-04-12 17:36:24" itemprop="dateModified" datetime="2026-04-12T17:36:24+08:00">2026-04-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
-        </span>
+      <time title="创建时间：2026-04-26 12:03:10 / 修改时间：13:19:22" itemprop="dateCreated datePublished" datetime="2026-04-26T12:03:10+08:00">2026-04-26</time>
     </span>
 
   
@@ -289,10 +274,81 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>大家好！我是 lhc0707。</p>
-<p>最开始我的身份是一个小孩，后来变成小学生/初中生/初中OIer/高中OIer/高中生，但是好像一直没有摆脱掉菜逼的身份给我带来的厄运。最开始我尝试正常的和身边的佬爷们正常相处，后来发现菜逼的身份让我表达自己是个菜逼的行为都蒙上了遭遇捧杀的风险，所以我现在还是个菜逼。但是庆幸我现在已经拜托了螳臂的身份，这让我最起码拥有了说话的权力。这确实值得让我知足，然后老老实实的闭嘴。</p>
-<p>但是我的天性不允许我闭嘴，哪怕是在经历了佬爷们毁天灭地的打击之后我也还是无法管住我的嘴。但是我已经见识到了佬爷们的厉害，所以这个博客里面的东西是佬爷们所看不到的，我也不指望佬爷们屈尊俯就这里然后骂上两句，更不指望佬爷们能从这里面学到什么。如果你是比我还菜逼的菜逼，但愿你们不会从这里面感到来自我的杀伤，但你们要学会接受佬爷们给的杀伤，否则大概一辈子也无法变成佬爷了。</p>
-<p>哎呀又管不住嘴了。无所谓，反正你骂我我也就躲在屏幕后面（当然你找到了我然后给我真实了的话我没话说）。但如果你想看看这个菜逼的博客里面写了点啥的话，就继续吧。</p>
+          <h3 id="abel-变换分布求和公式">Abel 变换（分布求和公式）</h3>
+<p><span
+class="math display">$$\sum_{i=1}^na_ib_i=\sum_{i=1}^{n-1}S_i(b_k-b_{k+1})+S_nb_n$$</span></p>
+<p>其中 <span class="math inline">$S_i=\sum_{k=1}^ia_k$</span>。如果记
+<span
+class="math inline"><em>Δ</em><em>S</em><sub><em>k</em></sub> = <em>S</em><sub><em>k</em></sub> − <em>S</em><sub><em>k</em> − 1</sub></span>，<span
+class="math inline"><em>Δ</em><em>b</em><sub><em>k</em></sub> = <em>b</em><sub><em>k</em> + 1</sub> − <em>b</em><sub><em>k</em></sub></span>，那么上述公式可以写成</p>
+<p><span class="math display">$$\sum_{k=1}b_k\Delta
+S_k=S_nb_n-\sum_{k=1}^nS_k\Delta b_k$$</span></p>
+<p>这与分布积分公式相近，成为分布求和公式。</p>
+<hr />
+<h3 id="abel-不等式">Abel 不等式</h3>
+<p>设 <span
+class="math inline"><em>a</em><sub>1</sub>, …, <em>a</em><sub><em>n</em></sub>, <em>b</em><sub>1</sub>, …, <em>b</em><sub><em>n</em></sub> ∈ ℝ</span>，且
+<span
+class="math inline"><em>b</em><sub>1</sub> ≥ <em>b</em><sub>2</sub> ≥ … ≥ <em>b</em><sub><em>n</em></sub> ≥ 0</span>，记
+<span
+class="math inline">$S_k=\sum_{i=1}^na_i,k=1,2,\dots,n$</span>，且</p>
+<p><span
+class="math display">$$M=\max_{i=1}^n\{S_i\},m=\min_{i=1}^n\{S_i\}$$</span></p>
+<p>证明 Abel 不等式</p>
+<p><span class="math display">$$mb_1\leq \sum_{k=1}^na_kb_k\leq
+Mb_1$$</span></p>
+<p><span class="math inline">proof.</span></p>
+<p><span
+class="math display">$$\sum_{k=1}^na_ib_i=\sum_{k=1}^nS_k(b_k-b_{k-1})\$$</span></p>
+<p><span
+class="math display"><em>m</em> ≤ <em>S</em><sub><em>k</em></sub> ≤ <em>M</em></span></p>
+<p><span class="math inline">Q.E.D.</span></p>
+<hr />
+<p>例题：设 <span
+class="math inline"><em>a</em><sub>1</sub>, …, <em>a</em><sub><em>n</em></sub> &gt; 0, <em>b</em><sub>1</sub> ≥ <em>b</em><sub>2</sub> ≥ … ≥ <em>b</em><sub><em>n</em></sub> &gt; 0</span>，且
+<span
+class="math inline"><em>a</em><sub>1</sub><em>a</em><sub>2</sub>…<em>a</em><sub><em>k</em></sub> ≥ <em>b</em><sub>1</sub><em>b</em><sub>2</sub>…<em>b</em><sub><em>k</em></sub></span>
+对 <span class="math inline"><em>k</em> = 1, 2, …, <em>n</em></span>
+都成立，证明：</p>
+<p><span
+class="math display">∑<em>a</em><sub><em>i</em></sub> ≥ <em>s</em><em>u</em><em>m</em><em>b</em><sub><em>i</em></sub></span></p>
+<p><span class="math inline">proof.</span></p>
+<p><span class="math display">$$\sum^k\frac{a_i}{b_i}\geq
+k\sqrt[k]{\prod^k \frac{a_i}{b_i}}\geq k$$</span></p>
+<p><span class="math display">$$\sum^k (\frac{a_i}{b_i}-1)\geq
+0$$</span></p>
+<p><span class="math display">$$\sum
+b_i(\frac{a_i}{b_i}-1)=\sum_k\sum_{i=1}^k(\frac{a_i}{b_i}-1)(b_k-b_{k+1})\geq
+0$$</span></p>
+<hr />
+<p>钟开莱不等式：设 <span
+class="math inline"><em>a</em><sub>1</sub> ≥ <em>a</em><sub>2</sub> ≥ … ≥ <em>a</em><sub><em>n</em></sub> &gt; 0</span>
+且 <span class="math inline">$\sum_{i=1}^ka_i\leq
+\sum_{i=1}^kb_i$</span>，证明</p>
+<ol type="1">
+<li><p><span
+class="math display">∑<em>a</em><sub><em>i</em></sub><sup>2</sup> ≤ ∑<em>b</em><sub><em>i</em></sub><sup>2</sup></span></p></li>
+<li><p><span
+class="math display">∑<em>a</em><sub><em>i</em></sub><sup>3</sup> ≤ ∑<em>a</em><sub><em>i</em></sub><em>b</em><sub><em>i</em></sub><sup>2</sup></span></p></li>
+</ol>
+<p><span class="math inline">proof.</span></p>
+<p>设 <span class="math inline">$A_k=\sum_{i=1}^ka_i$</span>，<span
+class="math inline">$B_k=\sum_{i=1}^kb_i$</span>，则</p>
+<p><span
+class="math display">∑<em>a</em><sub><em>i</em></sub><sup>2</sup> = ∑<em>A</em><sub><em>k</em></sub>(<em>a</em><sub><em>k</em></sub> − <em>a</em><sub><em>k</em> + 1</sub>) ≤ ∑<em>B</em><sub><em>k</em></sub>(<em>a</em><sub><em>k</em></sub> − <em>a</em><sub><em>k</em> + 1</sub>) = ∑<em>a</em><sub><em>i</em></sub><em>b</em><sub><em>i</em></sub></span></p>
+<p>再由柯西不等式，<span class="math inline">$\sum a_i^2\geq
+\dfrac{(\sum a_ib_i)^2}{\sum b_i^2}$</span>，得 <span
+class="math inline">∑<em>a</em><sub><em>i</em></sub><em>b</em><sub><em>i</em></sub> ≤ ∑<em>b</em><sub><em>i</em></sub><sup>2</sup></span></p>
+<p>故 <span
+class="math display">∑<em>a</em><sub><em>i</em></sub><sup>2</sup> ≤ ∑<em>b</em><sub><em>i</em></sub><sup>2</sup></span></p>
+<p>对第二问，有</p>
+<p><span
+class="math display">∑<em>a</em><sub><em>i</em></sub><sup>3</sup> = ∑<em>A</em><sub><em>k</em></sub>(<em>a</em><sub><em>k</em></sub><sup>2</sup> − <em>a</em><sub><em>k</em> + 1</sub><sup>2</sup>) ≤ ∑<em>B</em><sub><em>k</em></sub>(<em>a</em><sub><em>k</em></sub><sup>2</sup> − <em>a</em><sub><em>k</em> + 1</sub><sup>2</sup>) = ∑<em>a</em><sub><em>i</em></sub><sup>2</sup><em>b</em><sub><em>i</em></sub></span></p>
+<p>由 Cauchy，<span class="math inline">$\sum a_i^3\geq \dfrac{(\sum
+a_i^2b_i)^2}{\sum b_i^2a_i}$</span>，有 <span
+class="math inline">∑<em>a</em><sub><em>i</em></sub><sup>2</sup><em>b</em><sub><em>i</em></sub> ≤ ∑<em>b</em><sub><em>i</em></sub><sup>2</sup><em>a</em><sub><em>i</em></sub></span>，故</p>
+<p><span
+class="math display">∑<em>a</em><sub><em>i</em></sub><sup>3</sup> ≤ ∑<em>b</em><sub><em>i</em></sub><sup>2</sup><em>a</em><sub><em>i</em></sub></span></p>
 
       
     </div>
@@ -358,7 +414,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-04-19 18:24:23" itemprop="dateModified" datetime="2026-04-19T18:24:23+08:00">2026-04-19</time>
+      <time title="修改时间：2026-04-26 13:19:33" itemprop="dateModified" datetime="2026-04-26T13:19:33+08:00">2026-04-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -566,7 +622,7 @@ class="math inline">$a_n=\frac{1}{n+1}$</span>，就完事了。</p>
           
               <span class="post-sticky-flag" title="置顶">
                 <i class="fa fa-thumbtack"></i>
-              </span><a href="/2026/03/24/%E6%9F%AF%E8%A5%BF%E9%A2%98/" class="post-title-link" itemprop="url">柯西 & 卡尔松 & 赫尔德</a>
+              </span><a href="/2026/03/24/%E6%9F%AF%E8%A5%BF%E9%A2%98/" class="post-title-link" itemprop="url">柯西不等式及推广</a>
         </h2>
 
         <div class="post-meta-container">
@@ -584,7 +640,7 @@ class="math inline">$a_n=\frac{1}{n+1}$</span>，就完事了。</p>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-04-19 13:28:52" itemprop="dateModified" datetime="2026-04-19T13:28:52+08:00">2026-04-19</time>
+      <time title="修改时间：2026-04-26 13:19:28" itemprop="dateModified" datetime="2026-04-26T13:19:28+08:00">2026-04-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -614,6 +670,7 @@ class="math inline">$a_n=\frac{1}{n+1}$</span>，就完事了。</p>
 <p>不要把答案的一步出结果当成做题的正确姿态。短短一行字的背后可能会浪费掉你两张草稿纸</p>
 </blockquote>
 <hr />
+<h3 id="柯西题">柯西题</h3>
 <p><span class="math inline">Prob 1. </span> <span
 class="math inline"><em>a</em>, <em>b</em>, <em>c</em> ≥ 0</span>，证明</p>
 <p><span
@@ -852,6 +909,7 @@ class="math display">$$LHS=\sum_{cyc}\frac{a}{(a^2+1)+2(b+1)}\leq
 <p><span class="math display">$$LHS\geq
 \frac{(a+b+c+3)^2}{a^2+b^2+c^2+ab+bc+ca+3(a+b+c)+3}=2$$</span></p>
 <hr />
+<h3 id="柯西不等式推广">柯西不等式推广</h3>
 <p><span class="math inline">Prob. 11.</span> <span
 class="math inline"><em>a</em><sub><em>i</em></sub> ≥ 0</span>，求证</p>
 <p><span class="math display">$$\prod_{i=1}^n(1+a_i)\geq
@@ -1009,6 +1067,235 @@ class="math display">$$(\sum_{i=1}^ka_i^p)^n(\sum_{i=1}^kb_i^q)^{m-n}\geq
 (\sum_{i=1}^ka_ib_i)^m$$</span></p>
 <p>此即 Calson 不等式。</p>
 <hr />
+<p>距离是什么？</p>
+<p>集合 <span class="math inline"><em>V</em></span>
+是非空的，存在一个二元函数 <span
+class="math display"><em>d</em> : <em>V</em><sup>2</sup> → ℝ</span> 是
+<span class="math inline"><em>V</em></span> 的距离，则</p>
+<ol type="1">
+<li><span
+class="math inline"><em>d</em>(<em>x</em>, <em>y</em>) ≥ 0</span> 且
+<span
+class="math inline"><em>d</em>(<em>x</em>, <em>y</em>) = 0 ⇔ <em>x</em> = <em>y</em></span></li>
+<li><span
+class="math inline"><em>d</em>(<em>y</em>, <em>x</em>) = <em>d</em>(<em>x</em>, <em>y</em>)</span>
+称为对称性</li>
+<li><span
+class="math inline"><em>d</em>(<em>x</em>, <em>y</em>) + <em>d</em>(<em>y</em>, <em>z</em>) ≥ <em>d</em>(<em>x</em>, <em>z</em>)</span>
+称为三角不等式</li>
+</ol>
+<p>当 <span class="math inline"><em>V</em></span>
+是向量空间的时候，则任意 <span
+class="math inline"><em>x</em> ∈ <em>V</em></span>，都有 <span
+class="math inline"><em>x</em> = (<em>x</em><sub>1</sub>, <em>x</em><sub>2</sub>, …, <em>x</em><sub><em>n</em></sub>)</span>。范数
+<span class="math inline">||<em>x</em>||</span> 表示将 <span
+class="math inline"><em>x</em> ∈ <em>V</em></span>
+映射到非负实数来实现任意元素比大小。定义</p>
+<p><span class="math display">$$||x||_p=(|x_1|^p+|x_2|^p+\dots
+|x_n|^p)^{\frac{1}{p}}$$</span></p>
+<p>定义 <span
+class="math inline"><em>d</em>(<em>x</em>, <em>y</em>) = ||<em>x</em> − <em>y</em>||<sub><em>p</em></sub></span>，下面来证明这个东西符合“距离”定义。</p>
+<p>第一条显然满足，第二条也显然满足，难点在于证明三角不等式。</p>
+<p>要证 <span
+class="math display">||<em>x</em> − <em>y</em>||<sub><em>p</em></sub> + ||<em>y</em> − <em>z</em>||<sub><em>p</em></sub> ≥ ||<em>x</em> − <em>z</em>||<sub><em>p</em></sub></span></p>
+<p>令 <span
+class="math inline"><em>a</em> = <em>x</em> − <em>y</em></span>，<span
+class="math inline"><em>b</em> = <em>y</em> − <em>z</em></span>，相当于证明</p>
+<p><span
+class="math display">$$(\sum_{i=1}^n|a_i+b_i|^p)^{\frac{1}{p}}\leq
+(\sum_{i=1}^n|a_i|^p)^{\frac{1}{p}}+(\sum_{i=1}^n|b_i|^p)^{\frac{1}{p}}$$</span></p>
+<p>也就是 Minkowski 不等式。</p>
+<p><span
+class="math display">$$\sum_{i=1}^n|a_i+b_i|^p=\sum_{i=1}^n|a_i+b_i|^{p-1}|a_i+b_i|\leq
+\sum_{i=1}^n|a_i+b_i|^{p-1}(|a_i|+|b_i|)$$</span></p>
+<p><span class="math display">$$\leq
+(\sum_{i=1}^n|a_i+b_i|^{q(p-1)})^{\frac{1}{q}}((\sum_{i=1}^n|a_i|^p)^\frac{1}{p}+(\sum_{i=1}^n|b_i|^p)^\frac{1}{p})$$</span></p>
+<p>其中 <span class="math inline">$q=\frac{p}{p-1}$</span>，带入有</p>
+<p><span class="math display">$$\leq
+(\sum_{i=1}^n|a_i+b_i|^{p})^{1-\frac{1}{p}}((\sum_{i=1}^n|a_i|^p)^\frac{1}{p}+(\sum_{i=1}^n|b_i|^p)^\frac{1}{p})$$</span></p>
+<p>就证出来了。</p>
+<hr />
+<p><span class="math inline">Prob. 23</span> 求</p>
+<p><span
+class="math display">$$\sqrt{4y^2-12y+10}+\sqrt{18x^2-18x+5}+\sqrt{18y^2+4y^2-12xy+6x-4y+1}$$</span></p>
+<p>的最小值。</p>
+<p><span
+class="math display">$$\text{原式}=\sqrt{(2y-3)^2+1^2}+\sqrt{(3x-1)^2+(3x-2)^2}+\sqrt{(3x-2y+1)^2+(3x)^2}$$</span></p>
+<p>你要考虑两项的顺序怎么做。三个向量，第一个向量肯定是 <span
+class="math inline">(2<em>y</em> − 3, 1)</span>，第三个向量肯定是 <span
+class="math inline">(3<em>x</em> − 2<em>y</em> + 1, 3<em>x</em>)</span>，我第二个向量的第二个肯定是
+<span class="math inline">2 − 3<em>x</em></span>，那么第一个一定是 <span
+class="math inline">1 − 3<em>x</em></span>，然后用 Minkowski
+不等式就得出原式最小值是 <span
+class="math inline">$\sqrt{10}$</span>，只要三个向量共线即可。</p>
+<hr />
+<h3 id="反向柯西不等式">反向柯西不等式</h3>
+<p>这些东西的方向和柯西是反着的。</p>
+<hr />
+<p><span class="math inline">Prob. 24</span> Aczel 不等式</p>
+<p><span
+class="math inline"><em>a</em><sub><em>i</em></sub>, <em>b</em><sub><em>i</em></sub> &gt; 0</span>，<span
+class="math inline">$a_0^2&gt;\sum_{i=1}^na_i^2$</span>，<span
+class="math inline">$b_0^2\geq \sum_{i=1}^nb_i^2$</span>，证明</p>
+<p><span
+class="math display">$$(a_0^2-\sum_{i=1}^na_i^2)(b_0^2-\sum_{i=1}^nb_i^2)\leq
+(a_0b_0-\sum_{i=1}^na_ib_i)^2$$</span></p>
+<p><span class="math inline">proof.</span></p>
+<p>设 <span
+class="math inline">$A=a_0^2-\sum_{i=1}^na_i^2$</span>，<span
+class="math inline">$B=2(a_0b_0-\sum_{i=1}^na_ib_i)$</span>，<span
+class="math inline">$C=b_0^2-\sum_{i=1}^nb_i^2$</span>，那么</p>
+<p><span
+class="math display"><em>f</em>(<em>x</em>) = <em>A</em><em>x</em><sup>2</sup> − <em>B</em><em>x</em> + <em>C</em></span></p>
+<p>是开口向上的二次函数，并且</p>
+<p><span
+class="math display">$$f(\frac{b_0}{a_0})=-\sum_{i=1}^n(a_ix-b_i)^2\leq
+0$$</span></p>
+<p><span class="math display">$$\Delta\geq 0\iff
+4(a_0b_0-\sum_{i=1}^na_ib_i)^2\geq
+4(a_0^2-\sum_{i=1}^na_i^2)(b_0^2-\sum_{i=1}^nb_i^2)$$</span></p>
+<p>或者设 <span
+class="math inline">$x^2=a_0^2-\sum_{i=1}^na_i^2$</span>，<span
+class="math inline">$y^2=b_0^2-\sum_{i=1}^nb_i^2$</span>，就是柯西了。</p>
+<hr />
+<p><span class="math inline">Prob. 25. </span> 求函数 <span
+class="math display">$$y=\sqrt{2x-5}-\sqrt{x-3}$$</span> 的值域。</p>
+<p>先看定义域 <span class="math inline"><em>x</em> ∈ [3, ∞)</span>。所以
+<span class="math inline"><em>y</em> &gt; 0</span>。</p>
+<p><span
+class="math display">$$y^2=(\sqrt{2}\sqrt{x-2.5}-\sqrt{x-3})^2\geq
+\frac{1}{2}$$</span></p>
+<hr />
+<p><span class="math inline">Prob. 29</span> 康托洛维奇不等式</p>
+<p>设 <span
+class="math inline"><em>a</em><sub><em>i</em></sub> &gt; 0</span>，<span
+class="math inline"><em>λ</em><sub><em>i</em></sub> &gt; 0</span>，<span
+class="math inline"><em>i</em> = 1, 2, …, <em>n</em></span>，且 <span
+class="math inline"><em>a</em><sub>1</sub> + <em>a</em><sub>2</sub> + … + <em>a</em><sub><em>n</em></sub> = 1</span>，<span
+class="math inline"><em>λ</em><sub>1</sub> ≤ <em>λ</em><sub><em>i</em></sub> ≤ <em>λ</em><sub><em>n</em></sub></span>，证明</p>
+<p><span
+class="math display">$$(\sum_{i=1}^n\lambda_ia_i)(\sum_{i=1}^n\frac{a_i}{\lambda_i})\leq
+\frac{(\lambda_1+\lambda_n)^2}{4\lambda_1\lambda_n}$$</span></p>
+<p><span class="math inline">proof.</span></p>
+<p><span class="math display">$$LHS\leq
+\dfrac{(\sum_{i=1}^n(\lambda_i+\frac{1}{\lambda_i})a_i)^2}{4}$$</span></p>
+<p>只要证</p>
+<p><span
+class="math display">$$(\sum_{i=1}^n(\lambda_i+\frac{1}{\lambda_i})a_i)^2\leq
+\frac{(\lambda_1+\lambda_n)^2}{\lambda_1\lambda_n}$$</span></p>
+<p>你发现 <span class="math inline">$f(x)=x+\frac{1}{x}$</span>
+是凸的，所以 <span
+class="math inline">$\lambda_i+\frac{1}{\lambda_i}\leq
+\max\{\lambda_1+\frac{1}{\lambda_1},\lambda_1+\frac{1}{\lambda_1}\}=m$</span>，那么
+<span class="math inline">$m\geq
+\frac{1}{2}(\lambda_1+\frac{1}{\lambda_1}+\lambda_n+\frac{1}{\lambda_n})$</span></p>
+<p><span class="math display">$$LHS\leq
+(\sum_{i=1}^nma_i)^2=m^2$$</span></p>
+<p>然后做不了了。其实可以和柯西一样构造二次函数来证。</p>
+<hr />
+<p><span class="math inline">Prob. 31</span> 波利亚-赛格不等式。</p>
+<p>设 <span
+class="math inline">0 &lt; <em>m</em><sub>1</sub> ≤ <em>a</em><sub><em>i</em></sub> ≤ <em>M</em><sub>1</sub>, 0 &lt; <em>m</em><sub>2</sub> ≤ <em>b</em><sub><em>i</em></sub> ≤ <em>M</em><sub>2</sub>, <em>i</em> = 1, 2, …, <em>n</em></span>，证明</p>
+<p><span class="math display">$$\dfrac{(\sum a_i)(\sum b_i)}{(\sum
+a_ib_i)^2}\leq
+\frac{1}{4}(\sqrt{\dfrac{M_1M_2}{m_1m_2}}+\sqrt{\dfrac{m_1m_2}{M_1M_2}})^2$$</span></p>
+<p><span class="math inline">proof.</span></p>
+<p>右边这个东西肯定是均值放出来的，<span
+class="math inline"><em>m</em></span> 肯定也是 <span
+class="math inline"><em>a</em><sub><em>i</em></sub></span> 和 <span
+class="math inline"><em>b</em><sub><em>i</em></sub></span>
+放出来的，但是你右边直接放均值会放过，所以正确的姿态应该是放左边。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lhc0707.github.io/2026/03/22/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/lhc.png">
+      <meta itemprop="name" content="lhc0707">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lhc0707">
+      <meta itemprop="description" content="每一个不曾起舞的日子，都是对生命的辜负">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | lhc0707">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+              <span class="post-sticky-flag" title="置顶">
+                <i class="fa fa-thumbtack"></i>
+              </span><a href="/2026/03/22/hello-world/" class="post-title-link" itemprop="url">Hello, World!</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-03-22 17:35:08" itemprop="dateCreated datePublished" datetime="2026-03-22T17:35:08+08:00">2026-03-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-04-12 17:36:24" itemprop="dateModified" datetime="2026-04-12T17:36:24+08:00">2026-04-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>大家好！我是 lhc0707。</p>
+<p>最开始我的身份是一个小孩，后来变成小学生/初中生/初中OIer/高中OIer/高中生，但是好像一直没有摆脱掉菜逼的身份给我带来的厄运。最开始我尝试正常的和身边的佬爷们正常相处，后来发现菜逼的身份让我表达自己是个菜逼的行为都蒙上了遭遇捧杀的风险，所以我现在还是个菜逼。但是庆幸我现在已经拜托了螳臂的身份，这让我最起码拥有了说话的权力。这确实值得让我知足，然后老老实实的闭嘴。</p>
+<p>但是我的天性不允许我闭嘴，哪怕是在经历了佬爷们毁天灭地的打击之后我也还是无法管住我的嘴。但是我已经见识到了佬爷们的厉害，所以这个博客里面的东西是佬爷们所看不到的，我也不指望佬爷们屈尊俯就这里然后骂上两句，更不指望佬爷们能从这里面学到什么。如果你是比我还菜逼的菜逼，但愿你们不会从这里面感到来自我的杀伤，但你们要学会接受佬爷们给的杀伤，否则大概一辈子也无法变成佬爷了。</p>
+<p>哎呀又管不住嘴了。无所谓，反正你骂我我也就躲在屏幕后面（当然你找到了我然后给我真实了的话我没话说）。但如果你想看看这个菜逼的博客里面写了点啥的话，就继续吧。</p>
 
       
     </div>

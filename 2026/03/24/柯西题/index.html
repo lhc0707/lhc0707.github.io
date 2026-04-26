@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"lhc0707.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="不要把答案的一步出结果当成做题的正确姿态。短短一行字的背后可能会浪费掉你两张草稿纸   Prob 1.  a, b, c ≥ 0，证明 $$\frac{a^2-bc}{2a^2+b^2+c^2}+\frac{b^2-ac}{a^2+2b^2+c^2}+\frac{c^2-ba}{a^2+b^2+2c^2}\geq 0$$ proof. 猜测在 a &#x3D; b &#x3D; c 时取等，验证一下，如果 a &#x3D;">
+    <meta name="description" content="不要把答案的一步出结果当成做题的正确姿态。短短一行字的背后可能会浪费掉你两张草稿纸   柯西题 Prob 1.  a, b, c ≥ 0，证明 $$\frac{a^2-bc}{2a^2+b^2+c^2}+\frac{b^2-ac}{a^2+2b^2+c^2}+\frac{c^2-ba}{a^2+b^2+2c^2}\geq 0$$ proof. 猜测在 a &#x3D; b &#x3D; c 时取等，验证一下，如果">
 <meta property="og:type" content="article">
-<meta property="og:title" content="柯西 &amp; 卡尔松 &amp; 赫尔德">
+<meta property="og:title" content="柯西不等式及推广">
 <meta property="og:url" content="https://lhc0707.github.io/2026/03/24/%E6%9F%AF%E8%A5%BF%E9%A2%98/index.html">
 <meta property="og:site_name" content="lhc0707">
-<meta property="og:description" content="不要把答案的一步出结果当成做题的正确姿态。短短一行字的背后可能会浪费掉你两张草稿纸   Prob 1.  a, b, c ≥ 0，证明 $$\frac{a^2-bc}{2a^2+b^2+c^2}+\frac{b^2-ac}{a^2+2b^2+c^2}+\frac{c^2-ba}{a^2+b^2+2c^2}\geq 0$$ proof. 猜测在 a &#x3D; b &#x3D; c 时取等，验证一下，如果 a &#x3D;">
+<meta property="og:description" content="不要把答案的一步出结果当成做题的正确姿态。短短一行字的背后可能会浪费掉你两张草稿纸   柯西题 Prob 1.  a, b, c ≥ 0，证明 $$\frac{a^2-bc}{2a^2+b^2+c^2}+\frac{b^2-ac}{a^2+2b^2+c^2}+\frac{c^2-ba}{a^2+b^2+2c^2}\geq 0$$ proof. 猜测在 a &#x3D; b &#x3D; c 时取等，验证一下，如果">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-03-24T14:07:36.000Z">
-<meta property="article:modified_time" content="2026-04-19T05:28:52.443Z">
+<meta property="article:modified_time" content="2026-04-26T05:19:28.448Z">
 <meta property="article:author" content="lhc0707">
 <meta property="article:tag" content="做题">
 <meta name="twitter:card" content="summary">
@@ -37,10 +37,10 @@
 <link rel="canonical" href="https://lhc0707.github.io/2026/03/24/%E6%9F%AF%E8%A5%BF%E9%A2%98/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lhc0707.github.io/2026/03/24/%E6%9F%AF%E8%A5%BF%E9%A2%98/","path":"2026/03/24/柯西题/","title":"柯西 & 卡尔松 & 赫尔德"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lhc0707.github.io/2026/03/24/%E6%9F%AF%E8%A5%BF%E9%A2%98/","path":"2026/03/24/柯西题/","title":"柯西不等式及推广"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>柯西 & 卡尔松 & 赫尔德 | lhc0707</title>
+<title>柯西不等式及推广 | lhc0707</title>
   
 
 
@@ -154,7 +154,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -167,6 +167,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%AF%E8%A5%BF%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">柯西题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%AF%E8%A5%BF%E4%B8%8D%E7%AD%89%E5%BC%8F%E6%8E%A8%E5%B9%BF"><span class="nav-number">2.</span> <span class="nav-text">柯西不等式推广</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8D%E5%90%91%E6%9F%AF%E8%A5%BF%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">反向柯西不等式</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -181,7 +182,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -192,7 +193,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -244,12 +245,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="柯西 &amp; 卡尔松 &amp; 赫尔德 | lhc0707">
+      <meta itemprop="name" content="柯西不等式及推广 | lhc0707">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          柯西 & 卡尔松 & 赫尔德
+          柯西不等式及推广
         </h1>
 
         <div class="post-meta-container">
@@ -267,7 +268,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-04-19 13:28:52" itemprop="dateModified" datetime="2026-04-19T13:28:52+08:00">2026-04-19</time>
+      <time title="修改时间：2026-04-26 13:19:28" itemprop="dateModified" datetime="2026-04-26T13:19:28+08:00">2026-04-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -296,6 +297,7 @@
 <p>不要把答案的一步出结果当成做题的正确姿态。短短一行字的背后可能会浪费掉你两张草稿纸</p>
 </blockquote>
 <hr />
+<h3 id="柯西题">柯西题</h3>
 <p><span class="math inline">Prob 1. </span> <span
 class="math inline"><em>a</em>, <em>b</em>, <em>c</em> ≥ 0</span>，证明</p>
 <p><span
@@ -534,6 +536,7 @@ class="math display">$$LHS=\sum_{cyc}\frac{a}{(a^2+1)+2(b+1)}\leq
 <p><span class="math display">$$LHS\geq
 \frac{(a+b+c+3)^2}{a^2+b^2+c^2+ab+bc+ca+3(a+b+c)+3}=2$$</span></p>
 <hr />
+<h3 id="柯西不等式推广">柯西不等式推广</h3>
 <p><span class="math inline">Prob. 11.</span> <span
 class="math inline"><em>a</em><sub><em>i</em></sub> ≥ 0</span>，求证</p>
 <p><span class="math display">$$\prod_{i=1}^n(1+a_i)\geq
@@ -691,6 +694,144 @@ class="math display">$$(\sum_{i=1}^ka_i^p)^n(\sum_{i=1}^kb_i^q)^{m-n}\geq
 (\sum_{i=1}^ka_ib_i)^m$$</span></p>
 <p>此即 Calson 不等式。</p>
 <hr />
+<p>距离是什么？</p>
+<p>集合 <span class="math inline"><em>V</em></span>
+是非空的，存在一个二元函数 <span
+class="math display"><em>d</em> : <em>V</em><sup>2</sup> → ℝ</span> 是
+<span class="math inline"><em>V</em></span> 的距离，则</p>
+<ol type="1">
+<li><span
+class="math inline"><em>d</em>(<em>x</em>, <em>y</em>) ≥ 0</span> 且
+<span
+class="math inline"><em>d</em>(<em>x</em>, <em>y</em>) = 0 ⇔ <em>x</em> = <em>y</em></span></li>
+<li><span
+class="math inline"><em>d</em>(<em>y</em>, <em>x</em>) = <em>d</em>(<em>x</em>, <em>y</em>)</span>
+称为对称性</li>
+<li><span
+class="math inline"><em>d</em>(<em>x</em>, <em>y</em>) + <em>d</em>(<em>y</em>, <em>z</em>) ≥ <em>d</em>(<em>x</em>, <em>z</em>)</span>
+称为三角不等式</li>
+</ol>
+<p>当 <span class="math inline"><em>V</em></span>
+是向量空间的时候，则任意 <span
+class="math inline"><em>x</em> ∈ <em>V</em></span>，都有 <span
+class="math inline"><em>x</em> = (<em>x</em><sub>1</sub>, <em>x</em><sub>2</sub>, …, <em>x</em><sub><em>n</em></sub>)</span>。范数
+<span class="math inline">||<em>x</em>||</span> 表示将 <span
+class="math inline"><em>x</em> ∈ <em>V</em></span>
+映射到非负实数来实现任意元素比大小。定义</p>
+<p><span class="math display">$$||x||_p=(|x_1|^p+|x_2|^p+\dots
+|x_n|^p)^{\frac{1}{p}}$$</span></p>
+<p>定义 <span
+class="math inline"><em>d</em>(<em>x</em>, <em>y</em>) = ||<em>x</em> − <em>y</em>||<sub><em>p</em></sub></span>，下面来证明这个东西符合“距离”定义。</p>
+<p>第一条显然满足，第二条也显然满足，难点在于证明三角不等式。</p>
+<p>要证 <span
+class="math display">||<em>x</em> − <em>y</em>||<sub><em>p</em></sub> + ||<em>y</em> − <em>z</em>||<sub><em>p</em></sub> ≥ ||<em>x</em> − <em>z</em>||<sub><em>p</em></sub></span></p>
+<p>令 <span
+class="math inline"><em>a</em> = <em>x</em> − <em>y</em></span>，<span
+class="math inline"><em>b</em> = <em>y</em> − <em>z</em></span>，相当于证明</p>
+<p><span
+class="math display">$$(\sum_{i=1}^n|a_i+b_i|^p)^{\frac{1}{p}}\leq
+(\sum_{i=1}^n|a_i|^p)^{\frac{1}{p}}+(\sum_{i=1}^n|b_i|^p)^{\frac{1}{p}}$$</span></p>
+<p>也就是 Minkowski 不等式。</p>
+<p><span
+class="math display">$$\sum_{i=1}^n|a_i+b_i|^p=\sum_{i=1}^n|a_i+b_i|^{p-1}|a_i+b_i|\leq
+\sum_{i=1}^n|a_i+b_i|^{p-1}(|a_i|+|b_i|)$$</span></p>
+<p><span class="math display">$$\leq
+(\sum_{i=1}^n|a_i+b_i|^{q(p-1)})^{\frac{1}{q}}((\sum_{i=1}^n|a_i|^p)^\frac{1}{p}+(\sum_{i=1}^n|b_i|^p)^\frac{1}{p})$$</span></p>
+<p>其中 <span class="math inline">$q=\frac{p}{p-1}$</span>，带入有</p>
+<p><span class="math display">$$\leq
+(\sum_{i=1}^n|a_i+b_i|^{p})^{1-\frac{1}{p}}((\sum_{i=1}^n|a_i|^p)^\frac{1}{p}+(\sum_{i=1}^n|b_i|^p)^\frac{1}{p})$$</span></p>
+<p>就证出来了。</p>
+<hr />
+<p><span class="math inline">Prob. 23</span> 求</p>
+<p><span
+class="math display">$$\sqrt{4y^2-12y+10}+\sqrt{18x^2-18x+5}+\sqrt{18y^2+4y^2-12xy+6x-4y+1}$$</span></p>
+<p>的最小值。</p>
+<p><span
+class="math display">$$\text{原式}=\sqrt{(2y-3)^2+1^2}+\sqrt{(3x-1)^2+(3x-2)^2}+\sqrt{(3x-2y+1)^2+(3x)^2}$$</span></p>
+<p>你要考虑两项的顺序怎么做。三个向量，第一个向量肯定是 <span
+class="math inline">(2<em>y</em> − 3, 1)</span>，第三个向量肯定是 <span
+class="math inline">(3<em>x</em> − 2<em>y</em> + 1, 3<em>x</em>)</span>，我第二个向量的第二个肯定是
+<span class="math inline">2 − 3<em>x</em></span>，那么第一个一定是 <span
+class="math inline">1 − 3<em>x</em></span>，然后用 Minkowski
+不等式就得出原式最小值是 <span
+class="math inline">$\sqrt{10}$</span>，只要三个向量共线即可。</p>
+<hr />
+<h3 id="反向柯西不等式">反向柯西不等式</h3>
+<p>这些东西的方向和柯西是反着的。</p>
+<hr />
+<p><span class="math inline">Prob. 24</span> Aczel 不等式</p>
+<p><span
+class="math inline"><em>a</em><sub><em>i</em></sub>, <em>b</em><sub><em>i</em></sub> &gt; 0</span>，<span
+class="math inline">$a_0^2&gt;\sum_{i=1}^na_i^2$</span>，<span
+class="math inline">$b_0^2\geq \sum_{i=1}^nb_i^2$</span>，证明</p>
+<p><span
+class="math display">$$(a_0^2-\sum_{i=1}^na_i^2)(b_0^2-\sum_{i=1}^nb_i^2)\leq
+(a_0b_0-\sum_{i=1}^na_ib_i)^2$$</span></p>
+<p><span class="math inline">proof.</span></p>
+<p>设 <span
+class="math inline">$A=a_0^2-\sum_{i=1}^na_i^2$</span>，<span
+class="math inline">$B=2(a_0b_0-\sum_{i=1}^na_ib_i)$</span>，<span
+class="math inline">$C=b_0^2-\sum_{i=1}^nb_i^2$</span>，那么</p>
+<p><span
+class="math display"><em>f</em>(<em>x</em>) = <em>A</em><em>x</em><sup>2</sup> − <em>B</em><em>x</em> + <em>C</em></span></p>
+<p>是开口向上的二次函数，并且</p>
+<p><span
+class="math display">$$f(\frac{b_0}{a_0})=-\sum_{i=1}^n(a_ix-b_i)^2\leq
+0$$</span></p>
+<p><span class="math display">$$\Delta\geq 0\iff
+4(a_0b_0-\sum_{i=1}^na_ib_i)^2\geq
+4(a_0^2-\sum_{i=1}^na_i^2)(b_0^2-\sum_{i=1}^nb_i^2)$$</span></p>
+<p>或者设 <span
+class="math inline">$x^2=a_0^2-\sum_{i=1}^na_i^2$</span>，<span
+class="math inline">$y^2=b_0^2-\sum_{i=1}^nb_i^2$</span>，就是柯西了。</p>
+<hr />
+<p><span class="math inline">Prob. 25. </span> 求函数 <span
+class="math display">$$y=\sqrt{2x-5}-\sqrt{x-3}$$</span> 的值域。</p>
+<p>先看定义域 <span class="math inline"><em>x</em> ∈ [3, ∞)</span>。所以
+<span class="math inline"><em>y</em> &gt; 0</span>。</p>
+<p><span
+class="math display">$$y^2=(\sqrt{2}\sqrt{x-2.5}-\sqrt{x-3})^2\geq
+\frac{1}{2}$$</span></p>
+<hr />
+<p><span class="math inline">Prob. 29</span> 康托洛维奇不等式</p>
+<p>设 <span
+class="math inline"><em>a</em><sub><em>i</em></sub> &gt; 0</span>，<span
+class="math inline"><em>λ</em><sub><em>i</em></sub> &gt; 0</span>，<span
+class="math inline"><em>i</em> = 1, 2, …, <em>n</em></span>，且 <span
+class="math inline"><em>a</em><sub>1</sub> + <em>a</em><sub>2</sub> + … + <em>a</em><sub><em>n</em></sub> = 1</span>，<span
+class="math inline"><em>λ</em><sub>1</sub> ≤ <em>λ</em><sub><em>i</em></sub> ≤ <em>λ</em><sub><em>n</em></sub></span>，证明</p>
+<p><span
+class="math display">$$(\sum_{i=1}^n\lambda_ia_i)(\sum_{i=1}^n\frac{a_i}{\lambda_i})\leq
+\frac{(\lambda_1+\lambda_n)^2}{4\lambda_1\lambda_n}$$</span></p>
+<p><span class="math inline">proof.</span></p>
+<p><span class="math display">$$LHS\leq
+\dfrac{(\sum_{i=1}^n(\lambda_i+\frac{1}{\lambda_i})a_i)^2}{4}$$</span></p>
+<p>只要证</p>
+<p><span
+class="math display">$$(\sum_{i=1}^n(\lambda_i+\frac{1}{\lambda_i})a_i)^2\leq
+\frac{(\lambda_1+\lambda_n)^2}{\lambda_1\lambda_n}$$</span></p>
+<p>你发现 <span class="math inline">$f(x)=x+\frac{1}{x}$</span>
+是凸的，所以 <span
+class="math inline">$\lambda_i+\frac{1}{\lambda_i}\leq
+\max\{\lambda_1+\frac{1}{\lambda_1},\lambda_1+\frac{1}{\lambda_1}\}=m$</span>，那么
+<span class="math inline">$m\geq
+\frac{1}{2}(\lambda_1+\frac{1}{\lambda_1}+\lambda_n+\frac{1}{\lambda_n})$</span></p>
+<p><span class="math display">$$LHS\leq
+(\sum_{i=1}^nma_i)^2=m^2$$</span></p>
+<p>然后做不了了。其实可以和柯西一样构造二次函数来证。</p>
+<hr />
+<p><span class="math inline">Prob. 31</span> 波利亚-赛格不等式。</p>
+<p>设 <span
+class="math inline">0 &lt; <em>m</em><sub>1</sub> ≤ <em>a</em><sub><em>i</em></sub> ≤ <em>M</em><sub>1</sub>, 0 &lt; <em>m</em><sub>2</sub> ≤ <em>b</em><sub><em>i</em></sub> ≤ <em>M</em><sub>2</sub>, <em>i</em> = 1, 2, …, <em>n</em></span>，证明</p>
+<p><span class="math display">$$\dfrac{(\sum a_i)(\sum b_i)}{(\sum
+a_ib_i)^2}\leq
+\frac{1}{4}(\sqrt{\dfrac{M_1M_2}{m_1m_2}}+\sqrt{\dfrac{m_1m_2}{M_1M_2}})^2$$</span></p>
+<p><span class="math inline">proof.</span></p>
+<p>右边这个东西肯定是均值放出来的，<span
+class="math inline"><em>m</em></span> 肯定也是 <span
+class="math inline"><em>a</em><sub><em>i</em></sub></span> 和 <span
+class="math inline"><em>b</em><sub><em>i</em></sub></span>
+放出来的，但是你右边直接放均值会放过，所以正确的姿态应该是放左边。</p>
 
     </div>
 
