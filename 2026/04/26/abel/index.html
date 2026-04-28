@@ -20,28 +20,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"lhc0707.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="Abel 变换（分布求和公式） $$\sum_{i&#x3D;1}^na_ib_i&#x3D;\sum_{i&#x3D;1}^{n-1}S_i(b_k-b_{k+1})+S_nb_n$$ 其中 $S_i&#x3D;\sum_{k&#x3D;1}^ia_k$。如果记 ΔSk &#x3D; Sk − Sk − 1，Δbk &#x3D; bk + 1 − bk，那么上述公式可以写成 $$\sum_{k&#x3D;1}b_k\Delta S_k&#x3D;S_nb_n-\sum_{k&#x3D;1}^n">
+    <meta name="description" content="不等式中和式的处理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="分布求和 &amp; 排序不等式">
+<meta property="og:title" content="分部求和 &amp; 排序不等式">
 <meta property="og:url" content="https://lhc0707.github.io/2026/04/26/abel/index.html">
 <meta property="og:site_name" content="lhc0707">
-<meta property="og:description" content="Abel 变换（分布求和公式） $$\sum_{i&#x3D;1}^na_ib_i&#x3D;\sum_{i&#x3D;1}^{n-1}S_i(b_k-b_{k+1})+S_nb_n$$ 其中 $S_i&#x3D;\sum_{k&#x3D;1}^ia_k$。如果记 ΔSk &#x3D; Sk − Sk − 1，Δbk &#x3D; bk + 1 − bk，那么上述公式可以写成 $$\sum_{k&#x3D;1}b_k\Delta S_k&#x3D;S_nb_n-\sum_{k&#x3D;1}^n">
+<meta property="og:description" content="不等式中和式的处理">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-04-26T04:03:10.000Z">
-<meta property="article:modified_time" content="2026-04-26T05:19:22.028Z">
+<meta property="article:modified_time" content="2026-04-28T08:49:12.312Z">
 <meta property="article:author" content="lhc0707">
-<meta property="article:tag" content="数学">
-<meta property="article:tag" content="数学竞赛">
+<meta property="article:tag" content="初等不等式">
 <meta name="twitter:card" content="summary">
 
 
 <link rel="canonical" href="https://lhc0707.github.io/2026/04/26/abel/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lhc0707.github.io/2026/04/26/abel/","path":"2026/04/26/abel/","title":"分布求和 & 排序不等式"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lhc0707.github.io/2026/04/26/abel/","path":"2026/04/26/abel/","title":"分部求和 & 排序不等式"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>分布求和 & 排序不等式 | lhc0707</title>
+<title>分部求和 & 排序不等式 | lhc0707</title><meta name="robots" content="noindex">
   
 
 
@@ -168,7 +167,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#abel-%E5%8F%98%E6%8D%A2%E5%88%86%E5%B8%83%E6%B1%82%E5%92%8C%E5%85%AC%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">Abel 变换（分布求和公式）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#abel-%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">Abel 不等式</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#abel-%E5%8F%98%E6%8D%A2%E5%88%86%E5%B8%83%E6%B1%82%E5%92%8C%E5%85%AC%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">Abel 变换（分布求和公式）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#abel-%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">Abel 不等式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">排序不等式</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -183,7 +182,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -194,7 +193,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -246,12 +245,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="分布求和 &amp; 排序不等式 | lhc0707">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="分部求和 &amp; 排序不等式 | lhc0707">
+      <meta itemprop="description" content="不等式中和式的处理">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          分布求和 & 排序不等式
+          分部求和 & 排序不等式
         </h1>
 
         <div class="post-meta-container">
@@ -261,14 +260,34 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2026-04-26 12:03:10 / 修改时间：13:19:22" itemprop="dateCreated datePublished" datetime="2026-04-26T12:03:10+08:00">2026-04-26</time>
+      <time title="创建时间：2026-04-26 12:03:10" itemprop="dateCreated datePublished" datetime="2026-04-26T12:03:10+08:00">2026-04-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-04-28 16:49:12" itemprop="dateModified" datetime="2026-04-28T16:49:12+08:00">2026-04-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">数学</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%AD%A6%E7%AB%9E%E8%B5%9B/" itemprop="url" rel="index"><span itemprop="name">数学竞赛</span></a>
+        </span>
     </span>
 
   
 </div>
 
+            <div class="post-description">不等式中和式的处理</div>
         </div>
       </header>
 
@@ -284,7 +303,7 @@ class="math inline"><em>Δ</em><em>S</em><sub><em>k</em></sub> = <em>S</em><
 class="math inline"><em>Δ</em><em>b</em><sub><em>k</em></sub> = <em>b</em><sub><em>k</em> + 1</sub> − <em>b</em><sub><em>k</em></sub></span>，那么上述公式可以写成</p>
 <p><span class="math display">$$\sum_{k=1}b_k\Delta
 S_k=S_nb_n-\sum_{k=1}^nS_k\Delta b_k$$</span></p>
-<p>这与分布积分公式相近，成为分布求和公式。</p>
+<p>这与分部积分公式相近，成为分部求和公式。</p>
 <hr />
 <h3 id="abel-不等式">Abel 不等式</h3>
 <p>设 <span
@@ -322,7 +341,7 @@ k\sqrt[k]{\prod^k \frac{a_i}{b_i}}\geq k$$</span></p>
 b_i(\frac{a_i}{b_i}-1)=\sum_k\sum_{i=1}^k(\frac{a_i}{b_i}-1)(b_k-b_{k+1})\geq
 0$$</span></p>
 <hr />
-<p>钟开莱不等式：设 <span
+<p><strong>钟开莱不等式</strong>：设 <span
 class="math inline"><em>a</em><sub>1</sub> ≥ <em>a</em><sub>2</sub> ≥ … ≥ <em>a</em><sub><em>n</em></sub> &gt; 0</span>
 且 <span class="math inline">$\sum_{i=1}^ka_i\leq
 \sum_{i=1}^kb_i$</span>，证明</p>
@@ -350,7 +369,114 @@ a_i^2b_i)^2}{\sum b_i^2a_i}$</span>，有 <span
 class="math inline">∑<em>a</em><sub><em>i</em></sub><sup>2</sup><em>b</em><sub><em>i</em></sub> ≤ ∑<em>b</em><sub><em>i</em></sub><sup>2</sup><em>a</em><sub><em>i</em></sub></span>，故</p>
 <p><span
 class="math display">∑<em>a</em><sub><em>i</em></sub><sup>3</sup> ≤ ∑<em>b</em><sub><em>i</em></sub><sup>2</sup><em>a</em><sub><em>i</em></sub></span></p>
-
+<hr />
+<p>例题：<span class="math inline"><em>n</em> ≥ 2</span>，<span
+class="math inline"><em>x</em><sub>1</sub> + … + <em>x</em><sub><em>n</em></sub> = 0</span>，<span
+class="math inline">|<em>x</em><sub>1</sub>| + |<em>x</em><sub>2</sub>| + … + |<em>x</em><sub><em>n</em></sub>| = 1</span>，求证</p>
+<p><span class="math display">$$|x_1+\frac{x_2}{2}+\frac{x_3}{3}+\dots
++\frac{x_n}{n}|\leq \frac{1}{2}-\frac{1}{2n}$$</span></p>
+<p><span class="math inline">proof.</span></p>
+<p>我们发现假设左边绝对值里面的东西是正的，那么肯定是负的数越小越往后放左边的值更大，反之取个绝对值也是一样的。这告诉我们什么？</p>
+<p>设 <span
+class="math inline"><em>S</em><sub><em>k</em></sub> = <em>x</em><sub>1</sub> + <em>x</em><sub>2</sub> + … + <em>x</em><sub><em>k</em></sub></span>，我们来证</p>
+<p><span
+class="math display">$$|S_k|=|x_1+x_2+\dots+x_k|=|x_{k+1}+\dots+x_n|
+\\=\frac{1}{2}(|x_1+x_2+\dots+x_k|+|x_{k+1}+\dots+x_n|)
+\\\leq \frac{1}{2}(|x_1|+|x_2|+\dots+|x_n|)=\frac{1}{2}
+$$</span></p>
+<p>由 abel 变换，</p>
+<p><span
+class="math display">$$LHS=|\sum_{k=1}^{n-1}S_k(\frac{1}{k}-\frac{1}{k+1})+S_n\cdot
+\frac{1}{n}|\leq \sum_{k=1}^{n-1}|S_k|(\frac{1}{k}-\frac{1}{k+1})\leq
+\frac{1}{2}-\frac{1}{2n}$$</span></p>
+<hr />
+<p>例题：<span
+class="math inline"><em>a</em><sub><em>i</em></sub> &gt; 0</span>，<span
+class="math inline"><em>i</em> = 1, 2, …, <em>n</em></span>，<span
+class="math inline">$\sum_{i=1}^ka_i\leq k$</span>，求证</p>
+<p><span class="math display">$$\sum_{i=1}^n \frac{a_i}{i}\leq
+1+\frac{1}{2}+\dots+\frac{1}{n}$$</span></p>
+<p><span class="math inline">proof.</span></p>
+<p><span
+class="math display">$$(a_1-1)+\frac{1}{2}(a_2-1)+\dots+\frac{1}{n}(a_n-1)\leq
+0$$</span></p>
+<p>由 abel 变换，</p>
+<p><span class="math display">$$LHS\leq
+\sum_{k=1}^{n-1}(\sum_{i=1}^ka_i-k)(\frac{1}{k}-\frac{1}{k-1})+(\sum_{i=1}^na_i-n)\cdot\frac{1}{n}\leq
+0$$</span></p>
+<hr />
+<p>例题：<span
+class="math inline"><em>a</em><sub><em>i</em></sub> &gt; 0</span>，<span
+class="math inline"><em>i</em> = 1, 2, …, <em>n</em></span>，<span
+class="math inline"><em>a</em><sub><em>i</em> + <em>j</em></sub> ≤ <em>a</em><sub><em>i</em></sub> + <em>a</em><sub><em>j</em></sub></span>，求证</p>
+<p><span
+class="math display">$$a_1+\frac{a_2}{2}+\dots+\frac{a_n}{n}\geq
+a_n$$</span></p>
+<p><span class="math inline">proof.</span></p>
+<p>考虑数学归纳法，如果</p>
+<p><span
+class="math display">$$a_1+\frac{a_2}{2}+\dots+\frac{a_{n-1}}{n-1}\geq
+a_{n-1}$$</span></p>
+<p>那么</p>
+<p><span
+class="math display">$$a_1+\frac{a_2}{2}+\dots+\frac{a_n}{n}\geq
+a_n$$</span></p>
+<p>就等价于</p>
+<p><span
+class="math display"><em>n</em><em>a</em><sub><em>n</em> − 1</sub> ≥ (<em>n</em> − 1)<em>a</em><sub><em>n</em></sub></span></p>
+<p>哎不对怎么放过了。考虑换第二类数学归纳法。</p>
+<p><span
+class="math display"><em>a</em><sub>1</sub> ≥ <em>a</em><sub>1</sub></span></p>
+<p><span class="math display">$$a_1+\frac{a_2}{2}\geq a_2$$</span></p>
+<p><span class="math display">$$a_1+\frac{a_2}{2}+\frac{a_3}{3}\geq
+a_3$$</span></p>
+<p><span class="math display">…</span></p>
+<p><span
+class="math display">$$a_1+\frac{a_2}{2}+\frac{a_3}{3}\dotsb+\frac{a_{n-1}}{n-1}\geq
+a_{n-1}$$</span></p>
+<p>上面的式子相加，有</p>
+<p><span
+class="math display">$$(n-1)a_1+(\frac{n}{2}-1)a_2+(\frac{n}{3}-1)a_3+\dots+(\frac{n}{n-1}-1)a_{n-1}\geq
+a_1+\dotsb+a_n
+\\ \iff n(a_1+\frac{a_2}{2}+\frac{a_3}{3}+\dots+\frac{a_{n-1}}{n-1})\geq
+2(a_1+\dotsb+a_{n-1})
+\\ \iff n(a_1+\frac{a_2}{2}+\frac{a_3}{3}+\dotsb+\frac{a_n}{n})\geq
+2(a_1+\dotsb+a_{n-1})+a_n
+$$</span></p>
+<p>要证明</p>
+<p><span
+class="math display">$$(n-1)(a_1+\frac{a_2}{2}+\dots+\frac{a_n}{n})\geq
+2(a_1+\dots+a_n)
+\\=(a_1+a_{n-1})+(a_2+a_{n-2})+\dotsb+(a_{n-1}+a_1)\geq
+(n-1)a_n$$</span></p>
+<p>所以</p>
+<p><span
+class="math display">$$a_1+\dots+\frac{1}{n-1}a_{n-1}+\frac{1}{n}a_n\geq
+\frac{n-1}{n}a_n+\frac{1}{n}a_n=a_n$$</span></p>
+<p><span class="math display">▫</span></p>
+<h3 id="排序不等式">排序不等式</h3>
+<p><span
+class="math display"><em>a</em><sub>1</sub> ≤ <em>a</em><sub>2</sub> ≤ … ≤ <em>a</em><sub><em>n</em></sub></span></p>
+<p><span
+class="math display"><em>b</em><sub>1</sub> ≤ <em>b</em><sub>2</sub> ≤ … ≤ <em>b</em><sub><em>n</em></sub></span></p>
+<p><span
+class="math inline"><em>i</em><sub>1</sub>, <em>i</em><sub>2</sub>, …, <em>i</em><sub><em>n</em></sub></span>
+是 <span class="math inline">1, 2, …, <em>n</em></span>
+的一个排列，求证</p>
+<p><span
+class="math display"><em>a</em><sub>1</sub><em>b</em><sub>1</sub> + <em>a</em><sub>2</sub><em>b</em><sub>2</sub> + … + <em>a</em><sub><em>n</em></sub><em>b</em><sub><em>n</em></sub> ≥ <em>a</em><sub><em>i</em><sub>1</sub></sub><em>b</em><sub><em>i</em><sub>1</sub></sub> + … + <em>a</em><sub><em>i</em><sub><em>n</em></sub></sub><em>b</em><sub><em>i</em><sub><em>n</em></sub></sub></span></p>
+<p><span class="math inline">proof.</span></p>
+<p><span
+class="math display"><em>a</em><sub>1</sub>(<em>b</em><sub>1</sub> − <em>b</em><sub><em>i</em><sub>1</sub></sub>) + … + <em>a</em><sub><em>n</em></sub>(<em>b</em><sub><em>n</em></sub> − <em>b</em><em>i</em><sub><em>n</em></sub>) ≥ 0</span></p>
+<p><span
+class="math display">$$\sum_{k=1}^n(\sum_{j=1}^k(b_j-b{i_j}))(a_k-a_{k+1})\geq
+0$$</span></p>
+<p><span
+class="math display">$$\sum_{k=1}^n(\sum_{j=1}^kb_j-\sum_{j=1}^kb_{i_j})(a_k-a_{k+1})\geq
+0$$</span></p>
+<p><span class="math inline">Q.E.D</span></p>
+<hr />
+<!-- flag of hidden posts -->
     </div>
 
     
@@ -359,21 +485,11 @@ class="math display">∑<em>a</em><sub><em>i</em></sub><sup>3</sup> ≤ ∑<
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
-              <a href="/tags/%E6%95%B0%E5%AD%A6%E7%AB%9E%E8%B5%9B/" rel="tag"># 数学竞赛</a>
+              <a href="/tags/%E5%88%9D%E7%AD%89%E4%B8%8D%E7%AD%89%E5%BC%8F/" rel="tag"># 初等不等式</a>
           </div>
 
         
 
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2026/04/12/OH-problem/" rel="prev" title="厉害的羟基数学题">
-                  <i class="fa fa-angle-left"></i> 厉害的羟基数学题
-                </a>
-            </div>
-            <div class="post-nav-item">
-            </div>
-          </div>
     </footer>
   </article>
 </div>
